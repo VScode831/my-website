@@ -1,0 +1,39 @@
+
+.contact {
+  margin: 0rem;
+  padding: 2rem;
+  background: linear-gradient(to right, $theme-color-2, $theme-color-1, $theme-color-2);
+  color: $theme-color-5;
+
+  .contact_banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact_content {
+    display: flex;
+    margin-bottom: 3rem;
+    justify-content: space-around;
+
+    .contact_sheet {
+      width: 50%;
+      margin-top: 4rem;
+    }
+
+    .user_form {
+      margin-top: 3rem;
+      padding: 1rem;
+      background-color: #fff;
+      box-sizing: border-box;
+      border: 0.2rem solid $theme-color-5;
+      border-radius: 1rem;
+
+      .submit {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+  }
+}

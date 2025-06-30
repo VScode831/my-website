@@ -1,0 +1,74 @@
+{% load static %}
+<div class="contact" id="nav_contact">
+    <div class="container">
+        <div class="contact_banner">
+            <h1>CONTACT US</h1>
+        </div>
+        <div class="contact_content">
+            <div class="contact_sheet">
+                <h2>Email:</h2>
+                <p>YICHEN.WANG@VISUALUTION.CO.NZ</p>
+                <h2>CALL US NOW:</h2>
+                <p>+64-22-697-0628</p>
+            </div>
+            <form class="user_form" action='.' method='POST'>
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                <div class="submit_content form_top">
+                    {{ form.contact_first_name.errors }}
+                    {{ form.contact_first_name }}
+                    <label for="{{ form.contact_first_name.id_for_label }}" class="label-name">
+                        <span class="content-name">First Name*</span>
+                    </label>
+                </div>
+                <div class="submit_content">
+                    {{ form.contact_last_name.errors }}
+                    {{ form.contact_last_name }}
+                    <label for="{{ form.contact_last_name.id_for_label }}" class="label-name">
+                        <span class="content-name">Last Name*</span>
+                    </label>
+                </div>
+                <div class="submit_content">
+                    {{ form.contact_organization.errors }}
+                    {{ form.contact_organization }}
+                    <label for="{{ form.contact_organization.id_for_label }}" class="label-name">
+                        <span class="content-name">Company</span>
+                    </label>
+                </div>
+                <div class="submit_content">
+                    {{ form.contact_email.errors }}
+                    {{ form.contact_email }}
+                    <label for="{{ form.contact_email.id_for_label }}" class="label-name">
+                        <span class="content-name">Email*</span>
+                    </label>
+                </div>
+                <div class="submit_content">
+                    {{ form.contact_number.errors }}
+                    {{ form.contact_number }}
+                    <label for="{{ form.contact_number.id_for_label }}" class="label-name">
+                        <span class="content-name">Mobile Phone*</span>
+                    </label>
+                </div>
+                <div class="submit_content form_textarea">
+                    {{ form.contact_description.errors }}
+                    {{ form.contact_description }}
+                    <label for="{{ form.contact_description.id_for_label }}" class="label-name-ml">
+                        <span class="content-name-ml">Description Note:*</span>
+                    </label>
+
+                </div>
+                <div class="submit">
+                    <label for="submit" class="button_submit_style1">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <input type="submit" name="submit" />
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="{% static '/script/form.js' %}"></script>

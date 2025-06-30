@@ -1,0 +1,32 @@
+.service {
+  max-width: 2200px;
+  margin:20px auto;
+
+  .service_header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 20px auto;
+
+  .service_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: $light-color;
+    background: url($service-bg-img1);
+    background-size: cover;
+    background-attachment: fixed;
+
+    p {
+      text-align: center;
+    }
+  }
+}
+}

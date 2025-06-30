@@ -1,0 +1,250 @@
+// small screen
+@media only screen and (max-width:900px) {
+    .navbar_v1 {
+        bottom: 0px;
+        width: 100vw;
+        height: 5rem;
+
+        &::after {
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to left, #2104ddbd, #02ebd3);
+        }
+
+        .logo {
+            display: none;
+        }
+
+        .homelogo {
+            display: flex;
+            width: 3rem;
+            padding-left: 0rem;
+        }
+
+        .fa-home {
+            display: none;
+        }
+
+        .nav_links {
+            flex-direction: row;
+        }
+
+        .nav_items {
+
+            .nav_element {
+                margin: 0px;
+                padding: 0px;
+                justify-content: center;
+            }
+        }
+
+        .dropdown {
+
+            &:hover .nav_sublinks {
+                background-color: $theme-color-2;
+                left: 0;
+                bottom: 5rem;
+                width: 12rem;
+
+                .link_text {
+                    display: block;
+                }
+            }
+
+            .nav_subitems {
+
+                border-bottom: 3px solid $light-color;
+
+            }
+
+            .nav_subelement {
+                justify-content: flex-start;
+
+                .animate_underline {
+                    display: none;
+                }
+
+                &:hover {
+                    background-color: $theme-color-1;
+
+                    .link_text,
+                    .fas {
+                        color: $theme-color-3;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .navbar_h1 {
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    main {
+        margin-left: 0rem;
+    }
+
+
+    .contact {
+        .contact_content {
+            flex-direction: column;
+            .contact_sheet {
+                width: 100%;
+            }
+            .user_form {
+                width: 100%;
+            }
+        }
+    }
+
+    .service_grid {
+        grid-gap:5px;
+    }
+    .projects_grid {
+        grid-gap:5px;
+    }
+}
+
+// big screen 
+@media only screen and (min-width:900px) {
+    .navbar_v1 {
+        width: 6rem;
+        height: 100vh;
+        left:-6rem;
+
+        &::after {
+            top: 0px;
+            right: 0px;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to top, #2104ddbd, #02ebd3);
+        }
+
+        .logo {
+            display: flex;
+        }
+
+        .homelogo {
+            display: none;
+        }
+
+        .nav_links {
+            flex-direction: column;
+        }
+
+        .nav_items {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav_element,
+        .nav_subelement {
+            justify-content: flex-start;
+            margin: 0px;
+            padding: 0px;
+            filter: grayscale(90%) opacity(0.7);
+
+            &:hover {
+                filter: grayscale(0%) opacity(1);
+            }
+
+
+
+        }
+
+        .nav_items:first-child {
+            margin-top: 10rem;
+        }
+
+
+        .dropdown:hover {
+            .nav_sublinks {
+                left: 100%;
+                top: 0px;
+                width: 100%;
+            }
+
+            .nav_element {
+                filter: grayscale(0%) opacity(1);
+            }
+        }
+
+
+
+        // navbar hover effect
+        &:hover {
+            width: 13rem;
+
+            & .link_text,
+            & .fa-greater-than {
+                display: block;
+            }
+
+
+        }
+
+        &:hover .logo {
+            left: 3.5rem;
+        }
+
+
+    }
+    
+    .moveIn_h1 {
+        opacity: 1;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .moveOut_h1 {
+        transform: translateX(-100vw);
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+    }
+    
+    .moveIn_v1 {
+        transform: translateX(6rem);
+        transition: 0.4s linear;
+    }
+
+    .moveOut_v1 {
+        transform: translateX(-6rem);
+        transition: 0.4s ease-in-out;
+    }
+
+
+    .mainTop {
+        margin-left: 0rem;
+        transition: 0.2s ease-in-out;
+    }
+
+    .mainLeft {
+        margin-left: 6rem;
+        transition: 0.4s linear 0.2s;
+    }
+
+    .contact {
+        .contact_content {
+            .contact_sheet {
+                width: 50%;
+            }
+            .user_form {
+                width: 50%;
+            }
+        }
+    }
+
+    .service_grid {
+        grid-gap:10px;
+    }
+    .projects_grid {
+        grid-gap:10px;
+    }
+
+}

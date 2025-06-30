@@ -1,0 +1,132 @@
+.#{$formid} {
+  width: 50%;
+  max-width: 800px;
+  
+
+  .submit_content {
+    position: relative;
+    margin: 1rem 0rem;
+    height: 4rem;
+    overflow: hidden;
+    
+    &.form_top {
+      margin-top: 0;
+    }
+    
+    &.form_textarea {
+      height: 13rem;
+    }
+
+
+
+    .singleLine {
+      position: absolute;
+      width: 100%;
+      height: 2rem;
+      bottom: 0;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .multiLine {
+      position: absolute;
+      margin-top: 1rem;
+      bottom: 0;
+      resize:none;
+      font-size: 16px;
+      width: 100%;
+      border: none;
+      outline: none;
+    }
+
+
+    .label-name {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      border-bottom: 2px solid $theme-color-3;
+    }
+
+    .label-name-ml {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display:inline-block;
+      vertical-align: top;
+      pointer-events: none;
+      border-bottom: 2px solid $theme-color-3;
+    }
+
+    
+
+    .label-name:after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      bottom: -2px;
+      height: 100%;
+      width: 100%;
+      border-bottom: 4px solid $theme-color-5;
+      transform: translateX(-100%);
+      transition: 0.3s ease;
+    }
+
+    .label-name-ml:after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      bottom: -2px;
+      height: 100%;
+      width: 100%;
+      border-bottom: 4px solid $theme-color-5;
+      transform: translateX(-100%);
+      transition: 0.3s ease;
+    }
+
+    .content-name {
+      position: absolute;
+      bottom: 5px;
+      left: 0px;
+      color: $theme-color-1;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+
+    .content-name-ml {
+      position: absolute;
+      top: 1.5rem;
+      left: 0px;
+      color: $theme-color-1;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+  }
+
+
+}
+
+
+
+
+.#{$formid} .singleLine:focus+.label-name .content-name, 
+.#{$formid} .multiLine:focus+.label-name-ml .content-name-ml,
+.filling .content-name,
+.filling .content-name-ml
+ {
+  transform: translateY(-100%);
+  font-size: 1rem;
+  color: $theme-color-5;
+}
+
+.#{$formid} .singleLine:focus+.label-name::after,
+.#{$formid} .multiLine:focus+.label-name-ml::after,
+.filling .label-name::after,
+.filling .label-name-ml::after {
+  transform: translateX(0%);
+}

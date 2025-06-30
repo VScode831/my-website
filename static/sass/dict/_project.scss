@@ -1,0 +1,36 @@
+.projects {
+    .projects_header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .projects_grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 20px auto;
+        .project_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color:$light-color;
+            padding: 10px;
+        }
+        // Manage Grid Space
+        & > .project_content:nth-of-type(1){
+            // grid-column:1/5;
+            background: url($project-bg-img1) no-repeat center bottom/cover;
+        }
+        & > .project_content:nth-of-type(2){
+            // grid-column:5/7;
+            background: url($project-bg-img2) no-repeat center top/cover;
+        }
+        & > .project_content:nth-of-type(3){
+            // grid-column:1/4;
+            background: url($project-bg-img3) no-repeat center top/cover;
+        }
+        & > .project_content:nth-of-type(4){
+            // grid-column:4/7;
+            background: url($project-bg-img4) no-repeat center top/cover;
+        }
+    }
+}

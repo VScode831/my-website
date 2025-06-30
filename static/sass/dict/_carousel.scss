@@ -1,0 +1,124 @@
+.carousel {
+  position: relative;
+
+  .slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: auto;
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+
+
+      .slide_content {
+        position: absolute;
+        bottom: 70px;
+        left: -600px;
+        opacity: 0;
+        width: 600px;
+        background-color: rgba($color: $light-color, $alpha: 0.8);
+        color: rgba($color: $dark-color, $alpha: 0.8);
+        padding: 35px;
+
+        h1 {
+          margin-bottom: 1rem;
+        }
+      }
+
+
+      &_current {
+        opacity: 1;
+
+        .slide_content {
+          opacity: 1;
+          transform: translateX(600px);
+          transition: all 0.7s ease-in-out 0.3s;
+        }
+      }
+
+
+
+      &:first-child {
+        background: url($carousel-bg-img1) no-repeat center top/cover;
+      }
+
+      &:nth-child(2) {
+        background: url($carousel-bg-img2) no-repeat center center/cover;
+      }
+
+      &:nth-child(3) {
+        background: url($carousel-bg-img3) no-repeat center top/cover;
+      }
+
+      &:nth-child(4) {
+        background: url($carousel-bg-img4) no-repeat center top/cover;
+      }
+
+      &:nth-child(5) {
+        background: url($carousel-bg-img5) no-repeat center top/cover;
+      }
+    }
+  }
+
+  .buttons {
+    button {
+      position: absolute;
+      top: 45%;
+      border: 2px solid $light-color;
+      background-color: transparent;
+      color: $light-color;
+      cursor: pointer;
+      padding: 1rem 1.2rem;
+      border-radius: 50%;
+      font-size: 2rem;
+      outline: none;
+      opacity: 0.6;
+
+      &:hover {
+        @include set-background($dark-color);
+        opacity: 1;
+      }
+    }
+
+    button#slideNext {
+      right: 2rem;
+    }
+
+    button#slidePrev {
+      left: 2rem;
+    }
+
+  }
+
+  .bullets {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translate(-50%, 0);
+
+
+    div {
+      display: inline-block;
+      margin: 6px;
+      height: 10px;
+      width: 10px;
+      background-color: #ffffff;
+      opacity: 0.4;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .circle_current {
+      opacity: 1;
+    }
+  }
+
+
+}

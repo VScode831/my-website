@@ -1,0 +1,54 @@
+@import "dict/config";
+@import "dict/buttons";
+
+@import url("https://fonts.googleapis.com/css2?family=Quando&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.container {
+  position: relative;
+  max-width: 2200px;
+  padding: 0;
+  margin: 0 auto;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $light-color;
+  font-family: $font-body;
+  line-height: 1.6;
+  height: 100vh;
+
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $theme-color-2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $theme-color-5;
+  }
+
+}
+
+
+@import "dict/navbar";
+@import "dict/carousel";
+@import "dict/introduction";
+@import "dict/service";
+@import "dict/project";
+@import "dict/contact";
+@import "dict/form";
+@import "dict/footer";
+@import "dict/Thanks";
+
+
+
+@import "dict/media";

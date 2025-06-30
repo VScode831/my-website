@@ -1,0 +1,32 @@
+.thanks {
+    height: 100vh;
+    position:relative;
+    background: url($thanks-bg-img1) no-repeat center center/cover;
+    position: relative;
+    .container {
+        position: absolute;
+        top:33%;
+        left:50%;
+        transform: translateX(-50%);
+        height: 200px;
+        width: 600px;
+        padding: 50px 0;
+        align-items: center;
+        background-color: rgba($color: $light-color, $alpha: 0.8);
+
+        h1{
+            
+            text-align: center;
+            font-family: $font-header;
+            color: $dark-color;
+        }
+        p{
+            display: flex;
+            justify-content: center;
+            a{
+                margin-top: 1rem;
+                text-align: center;
+        }
+        }
+    }
+}

@@ -1,0 +1,115 @@
+/* Color Theme Swatches in Hex */
+$modern-office-building-1-hex: #3370a6;
+$modern-office-building-2-hex: #1e3e59;
+$modern-office-building-3-hex: #6db4f2;
+$modern-office-building-4-hex: #aed3f2;
+$modern-office-building-5-hex: #bfa380;
+
+/* Color Theme Swatches in RGBA */
+$modern-office-building-1-rgba: rgba(51, 112, 166, 1);
+$modern-office-building-2-rgba: rgba(30, 62, 89, 1);
+$modern-office-building-3-rgba: rgba(109, 180, 242, 1);
+$modern-office-building-4-rgba: rgba(174, 211, 242, 1);
+$modern-office-building-5-rgba: rgba(191, 163, 128, 1);
+
+/* Color Theme Swatches in HSLA */
+$modern-office-building-1-hsla: hsla(208, 52, 42, 1);
+$modern-office-building-2-hsla: hsla(207, 49, 23, 1);
+$modern-office-building-3-hsla: hsla(207, 83, 68, 1);
+$modern-office-building-4-hsla: hsla(207, 72, 81, 1);
+$modern-office-building-5-hsla: hsla(33, 32, 62, 1);
+
+
+/* Color Theme Swatches in Hex */
+$Hochhäuser-und-Büros-in-New-York-City-USA-1-hex: #BDD9F2;
+$Hochhäuser-und-Büros-in-New-York-City-USA-2-hex: #023859;
+$Hochhäuser-und-Büros-in-New-York-City-USA-3-hex: #4EA4D9;
+$Hochhäuser-und-Büros-in-New-York-City-USA-4-hex: #77B3D9;
+$Hochhäuser-und-Büros-in-New-York-City-USA-5-hex: #012E40;
+
+/* Color Theme Swatches in RGBA */
+$Hochhäuser-und-Büros-in-New-York-City-USA-1-rgba: rgba(188, 217, 242, 1);
+$Hochhäuser-und-Büros-in-New-York-City-USA-2-rgba: rgba(1, 55, 89, 1);
+$Hochhäuser-und-Büros-in-New-York-City-USA-3-rgba: rgba(78, 163, 216, 1);
+$Hochhäuser-und-Büros-in-New-York-City-USA-4-rgba: rgba(119, 179, 216, 1);
+$Hochhäuser-und-Büros-in-New-York-City-USA-5-rgba: rgba(1, 46, 63, 1);
+
+/* Color Theme Swatches in HSLA */
+$Hochhäuser-und-Büros-in-New-York-City-USA-1-hsla: hsla(208, 67, 84, 1);
+$Hochhäuser-und-Büros-in-New-York-City-USA-2-hsla: hsla(202, 96, 17, 1);
+$Hochhäuser-und-Büros-in-New-York-City-USA-3-hsla: hsla(202, 64, 57, 1);
+$Hochhäuser-und-Büros-in-New-York-City-USA-4-hsla: hsla(202, 56, 65, 1);
+$Hochhäuser-und-Büros-in-New-York-City-USA-5-hsla: hsla(196, 96, 12, 1);
+
+// setting section
+$theme-color-1:#023859;
+$theme-color-2:#012836;
+$theme-color-3:#6db4f2;
+$theme-color-4:#BDD9F2;
+$theme-color-5:#ccaf8c;
+
+
+
+
+$light-color: #f5f5f7;
+$dimlight-color: #f4f4f4;
+$dark-color: #000000;
+
+// Font Family
+
+$font-body: Arial,
+Helvetica,
+sans-serif;
+$font-header: 'Roboto',
+sans-serif;
+$font-form: 'Roboto',
+sans-serif;
+
+
+$transitiontime1:200ms;
+$transitiontime2:600ms;
+$transitiontime3:900ms;
+
+//form ID to appy form css
+
+$formid:"user_form";
+
+// imgs 
+$carousel-bg-img1:'/static/img/277_Broadway_westfield.jfif';
+$carousel-bg-img2:'/static/img/Oakshire.png';
+$carousel-bg-img3:'/static/img/Oakshire.png';
+$carousel-bg-img4:'/static/img/Oakshire.png';
+$carousel-bg-img5:'/static/img/Oakshire.png';
+
+$thanks-bg-img1:'/static/img/pexels-andrea-piacquadio-3760069.jpg';
+
+$service-bg-img1:'/static/img/photo-1531748049999-7217dc4cfbd2.jpg';
+
+$project-bg-img1:'/static/img/photo-1595392312303-ddfc8d8ca472.jpg';
+$project-bg-img2:'/static/img/photo-1581186869870-8cb41c507a56.jpg';
+$project-bg-img3:'/static/img/photo-1573787300288-9a1620beae88.jpg';
+$project-bg-img4:'/static/img/photo-1586772487191-4489cfc95678.jpg';
+
+
+// Set text color base on background
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return $dark-color;
+  }
+
+  @else {
+    @if ($color==$modern-office-building-2-hex) {
+      @return $modern-office-building-5-hex;
+    }
+
+    @else {
+      @return $light-color;
+    }
+  }
+}
+
+// Set background and text color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
