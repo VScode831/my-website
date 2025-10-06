@@ -1,13 +1,14 @@
-{% extends "pages/main.html"%}
+{% extends "pages/main.html" %}
+
+{% block title %}Thank You | Visualution{% endblock %}
 
 {% block content %}
-
-<div class="thanks">
-    <div class="container">
-        <h1>Thanks for contacting us</h1>        
-        <p>Our team will be in touch with your shortly</p>
-        <p><a href="{% url 'main:home' %}">Back to home page</a></p>
+<section class="section section--thanks">
+    <div class="container thanks">
+        <div class="thanks__icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h1>Thank you for reaching out.</h1>
+        <p>Our team has received your message and will be in touch shortly to discuss how we can support your project.</p>
+        <a class="button button--primary" href="{% url 'main:home' %}">Back to homepage</a>
     </div>
-</div>
-
+</section>
 {% endblock content %}

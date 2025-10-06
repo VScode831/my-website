@@ -1,17 +1,30 @@
+{% load static %}
 <footer class="footer">
-       <div class="container">
-            <div class="nav_footer">
-                <ul class="navf_links">
-                    <li class="navf_item"></li>
-                    <li class="navf_item"></li>
-                    <li class="navf_item"></li>
-                    <li class="navf_item"></li>
-                    <li class="navf_item"></li>
-                </ul>
+    <div class="footer__inner">
+        <div class="footer__brand">
+            <div class="footer__logos">
+                <img src="{% static 'img/Visualution-LOGO1-bgremove.png' %}" alt="Visualution emblem" class="footer__logo footer__logo--emblem">
             </div>
-            <div class="contact_footer">
-                <div class="conf_email"></div>
-                <div class="conf_phone"></div>
-            </div>
-       </div>
+            <p>Visualution delivers digital engineering, BIM, and CAD solutions tailored to complex construction projects across New Zealand and beyond.</p>
+        </div>
+        <div class="footer__column">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="{% url 'main:home' %}">Home</a></li>
+                <li><a href="{% url 'main:service' %}">Services</a></li>
+                <li><a href="{% url 'main:project' %}">Projects</a></li>
+                <li><a href="{% url 'main:about' %}">About</a></li>
+            </ul>
+        </div>
+        <div class="footer__column">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="mailto:yichen.wang@visualution.co.nz">contact@visualution.co.nz</a></li>
+                <li>Auckland, New Zealand</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>&copy; {% now "Y" %} Visualution Limited. All rights reserved.</p>
+    </div>
 </footer>

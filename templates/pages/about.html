@@ -1,5 +1,38 @@
-<div class="people" id="nav_aboutUs">
-    <div class="container">
-        
+{% load static %}
+<section class="section section--balanced" id="about">
+    <div class="layout layout--xl about-layout">
+        <div class="about__content">
+            <header class="section-heading section-heading--start">
+                <span class="section-heading__label">About Visualution</span>
+                <h2 class="section-heading__title">Blending engineering precision with design intelligence.</h2>
+                <p class="section-heading__description">Founded in Auckland, Visualution brings together architects, engineers, and software specialists dedicated to seamless project delivery. We believe that collaborative technology is the key to smarter, safer, and more sustainable spaces.</p>
+            </header>
+            <div class="about__highlights">
+                <div>
+                    <h3>Multi-disciplinary expertise</h3>
+                    <p>Our team spans BIM managers, CAD technicians, and computational designers who work as one project office.</p>
+                </div>
+                <div>
+                    <h3>Continuous innovation</h3>
+                    <p>We prototype custom tools, automate repetitive drafting, and push modelling platforms to do more for your team.</p>
+                </div>
+                <div>
+                    <h3>Partnership mindset</h3>
+                    <p>Every engagement is a long-term collaboration, with transparent communication and measurable performance.</p>
+                </div>
+            </div>
+        </div>
+        <div class="about__panel">
+            <div class="about__image" style="background-image: url('{% static 'img/pedro-lastra-Nyvq2juw4_o-unsplash.jpg' %}');"></div>
+            <div class="about__panel-body">
+                <h3>Leadership</h3>
+                <p>Led by Director Yichen Wang, Visualution has delivered landmark projects for leading developers across Australasia, providing the bridge between design vision and construction certainty.</p>
+                <ul>
+                    <li>BIM &amp; CAD documentation management</li>
+                    <li>Design coordination &amp; digital advisory</li>
+                    <li>Construction technology enablement</li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
+</section>

@@ -1,74 +1,76 @@
-{% load static %}
-<div class="contact" id="nav_contact">
-    <div class="container">
-        <div class="contact_banner">
-            <h1>CONTACT US</h1>
-        </div>
-        <div class="contact_content">
-            <div class="contact_sheet">
-                <h2>Email:</h2>
-                <p>YICHEN.WANG@VISUALUTION.CO.NZ</p>
-                <h2>CALL US NOW:</h2>
-                <p>+64-22-697-0628</p>
+<section class="section section--light" id="contact">
+    <div class="layout layout--xl contact">
+        <div class="contact__intro">
+            <header class="section-heading section-heading--start">
+                <span class="section-heading__label">Contact</span>
+                <h2 class="section-heading__title">Tell us about your next project.</h2>
+                <p class="section-heading__description">Share your goals, timelines, and any documentation you already have. We will respond within one business day with the next steps.</p>
+            </header>
+            <div class="contact__details">
+                <a href="mailto:yichen.wang@visualution.co.nz"><i class="fa-solid fa-envelope"></i> yichen.wang@visualution.co.nz</a>
+                <a href="tel:+64226970628"><i class="fa-solid fa-phone"></i> +64 22 697 0628</a>
+                <span><i class="fa-solid fa-location-dot"></i> Auckland, New Zealand</span>
             </div>
-            <form class="user_form" action='.' method='POST'>
+        </div>
+        <div class="contact__form">
+            <form method="post" novalidate>
                 {% csrf_token %}
-                {{ form.non_field_errors }}
-                <div class="submit_content form_top">
-                    {{ form.contact_first_name.errors }}
-                    {{ form.contact_first_name }}
-                    <label for="{{ form.contact_first_name.id_for_label }}" class="label-name">
-                        <span class="content-name">First Name*</span>
-                    </label>
+                {% if form.non_field_errors %}
+                <div class="form__error" role="alert">
+                    {% for error in form.non_field_errors %}
+                    <p>{{ error }}</p>
+                    {% endfor %}
                 </div>
-                <div class="submit_content">
-                    {{ form.contact_last_name.errors }}
-                    {{ form.contact_last_name }}
-                    <label for="{{ form.contact_last_name.id_for_label }}" class="label-name">
-                        <span class="content-name">Last Name*</span>
-                    </label>
+                {% endif %}
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="{{ form.contact_first_name.id_for_label }}">First name*</label>
+                        {{ form.contact_first_name }}
+                        {% for error in form.contact_first_name.errors %}
+                        <span class="form-field__error">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="form-field">
+                        <label for="{{ form.contact_last_name.id_for_label }}">Last name*</label>
+                        {{ form.contact_last_name }}
+                        {% for error in form.contact_last_name.errors %}
+                        <span class="form-field__error">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="form-field">
+                        <label for="{{ form.contact_organization.id_for_label }}">Company</label>
+                        {{ form.contact_organization }}
+                        {% for error in form.contact_organization.errors %}
+                        <span class="form-field__error">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="form-field">
+                        <label for="{{ form.contact_number.id_for_label }}">Phone*</label>
+                        {{ form.contact_number }}
+                        {% for error in form.contact_number.errors %}
+                        <span class="form-field__error">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="form-field">
+                        <label for="{{ form.contact_email.id_for_label }}">Email*</label>
+                        {{ form.contact_email }}
+                        {% for error in form.contact_email.errors %}
+                        <span class="form-field__error">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="form-field form-field--full">
+                        <label for="{{ form.contact_description.id_for_label }}">Project summary*</label>
+                        {{ form.contact_description }}
+                        {% for error in form.contact_description.errors %}
+                        <span class="form-field__error">{{ error }}</span>
+                        {% endfor %}
+                    </div>
                 </div>
-                <div class="submit_content">
-                    {{ form.contact_organization.errors }}
-                    {{ form.contact_organization }}
-                    <label for="{{ form.contact_organization.id_for_label }}" class="label-name">
-                        <span class="content-name">Company</span>
-                    </label>
-                </div>
-                <div class="submit_content">
-                    {{ form.contact_email.errors }}
-                    {{ form.contact_email }}
-                    <label for="{{ form.contact_email.id_for_label }}" class="label-name">
-                        <span class="content-name">Email*</span>
-                    </label>
-                </div>
-                <div class="submit_content">
-                    {{ form.contact_number.errors }}
-                    {{ form.contact_number }}
-                    <label for="{{ form.contact_number.id_for_label }}" class="label-name">
-                        <span class="content-name">Mobile Phone*</span>
-                    </label>
-                </div>
-                <div class="submit_content form_textarea">
-                    {{ form.contact_description.errors }}
-                    {{ form.contact_description }}
-                    <label for="{{ form.contact_description.id_for_label }}" class="label-name-ml">
-                        <span class="content-name-ml">Description Note:*</span>
-                    </label>
-
-                </div>
-                <div class="submit">
-                    <label for="submit" class="button_submit_style1">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <input type="submit" name="submit" />
-                    </label>
+                <div class="form__actions">
+                    <button class="button button--primary" type="submit">Send message</button>
+                    <p class="form__fineprint">We respect your privacy and will only use this information to respond to your enquiry.</p>
                 </div>
             </form>
         </div>
     </div>
-</div>
-
-<script src="{% static '/script/form.js' %}"></script>
+</section>

@@ -1,44 +1,51 @@
-from django import forms
+﻿from django import forms
 
 
 class ContactForm(forms.Form):
     contact_first_name = forms.CharField(
         max_length=100,
         widget=forms.TextInput(attrs={
-            'class': 'singleLine',
-            'autocomplete': 'given-name'
+            'class': 'form-input',
+            'autocomplete': 'given-name',
+            'placeholder': 'First name'
         }))
     contact_last_name = forms.CharField(
         max_length=100,
         widget=forms.TextInput(attrs={
-            'class': 'singleLine',
-            'autocomplete': 'family-name'
+            'class': 'form-input',
+            'autocomplete': 'family-name',
+            'placeholder': 'Last name'
         }))
     contact_organization = forms.CharField(
         max_length=100,
         required=False,
         widget=forms.TextInput(attrs={
-            'class': 'singleLine',
-            'autocomplete': 'organization'
+            'class': 'form-input',
+            'autocomplete': 'organization',
+            'placeholder': 'Company'
         }))
     contact_email = forms.EmailField(
         max_length=100,
         widget=forms.EmailInput(attrs={
-            'class': 'singleLine',
-            'autocomplete': 'email'
+            'class': 'form-input',
+            'autocomplete': 'email',
+            'placeholder': 'Email address'
         }))
     contact_number = forms.RegexField(
         max_length=100,
         regex=r'^\+?1?[^A-Za-z]{9,15}$',
-        error_messages=(
-            {"invalid": "Please enter a valid phone Number for Example:'+64 22 1234567'"}),
+        error_messages={
+            "invalid": "Please enter a valid phone number, e.g. '+64 22 123 4567'."
+        },
         widget=forms.TextInput(attrs={
-            'class': 'singleLine',
-            'autocomplete': 'tel-national'
+            'class': 'form-input',
+            'autocomplete': 'tel-national',
+            'placeholder': 'Phone number'
         }))
     contact_description = forms.CharField(
         widget=forms.Textarea(attrs={
-            'class': 'multiLine',
-            'cols': '60',
-            'rows': '9',
+            'class': 'form-textarea',
+            'rows': '6',
+            'placeholder': 'Tell us about your project, scope, and goals.'
         }))
+

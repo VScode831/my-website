@@ -1,12 +1,13 @@
-{% extends "pages/main.html"%}
+{% extends "pages/main.html" %}
+
+{% block title %}Visualution | Digital Engineering Reimagined{% endblock %}
 
 {% block content %}
-{% include 'pages/carousel.html' %}
-<!--About Us and Introduction combined currently-->
-{% include 'pages/introduction.html' %}
-{% include 'pages/about.html' %} 
+{% include 'pages/hero.html' %}
+{% include 'pages/stats.html' %}
 {% include 'pages/service.html' %}
+{% include 'pages/introduction.html' %}
 {% include 'pages/project.html' %}
+{% include 'pages/cta.html' %}
 {% include 'pages/contact.html' %}
-{% include 'pages/footer.html' %}
 {% endblock content %}

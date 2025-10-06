@@ -1,25 +1,48 @@
 {% load static %}
-<div class="projects" id="nav_project">
-    <div class="container">
-        <h1 class="projects_header">VISUALUTION PROJECTS</h1>
-        <div class="projects_grid">
-            <div class="project_content">
-                <h2>Westfield New market</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus earum veritatis voluptatem alias, aspernatur facere.</p>
-            </div>
-            <div class="project_content">
-                <h2>Westfield New market</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus earum veritatis voluptatem alias, aspernatur facere.</p>
-            </div>
-            <div class="project_content">
-                <h2>Westfield New market</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus earum veritatis voluptatem alias, aspernatur facere.</p>
-            </div>
-            <div class="project_content">
-                <h2>Westfield New market</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus earum veritatis voluptatem alias, aspernatur facere.</p>
-            </div>
+<section class="section section--deep" id="projects">
+    <div class="layout layout--xl">
+        <header class="section-heading">
+            <span class="section-heading__label">Project spotlight</span>
+            <h2 class="section-heading__title">Work that keeps New Zealand building.</h2>
+            <p class="section-heading__description">Across retail, transport, healthcare, and commercial sectors we deliver coordinated models, assured documentation, and confident delivery partners.</p>
+        </header>
+        <div class="project-grid">
+            <article class="project-tile">
+                <div class="project-tile__media" style="background-image: url('{% static "img/277_Broadway_westfield.jfif" %}');"></div>
+                <div class="project-tile__body">
+                    <h3>Westfield Newmarket</h3>
+                    <p>End-to-end BIM coordination for mechanical and façade systems across a multi-level retail destination.</p>
+                    <ul>
+                        <li>Trade issue tracking and resolution</li>
+                        <li>Complex façade geometry rationalisation</li>
+                        <li>Progressive as-built documentation</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="project-tile">
+                <div class="project-tile__media" style="background-image: url('{% static "img/photo-1595392312303-ddfc8d8ca472.jpg" %}');"></div>
+                <div class="project-tile__body">
+                    <h3>Metro Transport Hub</h3>
+                    <p>Digital rehearsal of rail concourse works aligning structures, services, and passenger movement.</p>
+                    <ul>
+                        <li>4D logistics visualisation</li>
+                        <li>Passenger flow simulations</li>
+                        <li>Asset information structuring</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="project-tile">
+                <div class="project-tile__media" style="background-image: url('{% static "img/matthew-henry-VviFtDJakYk-unsplash.jpg" %}');"></div>
+                <div class="project-tile__body">
+                    <h3>Healthcare Campus</h3>
+                    <p>BIM-enabled delivery of specialist clinical facilities with meticulous services coordination.</p>
+                    <ul>
+                        <li>Critical services clash mitigation</li>
+                        <li>Clinical stakeholder reviews</li>
+                        <li>Commissioning dashboards</li>
+                    </ul>
+                </div>
+            </article>
         </div>
     </div>
-</div>
-
+</section>

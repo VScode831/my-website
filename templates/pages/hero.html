@@ -1,0 +1,36 @@
+{% load static %}
+<section class="hero" id="top">
+    <div class="hero__background" aria-hidden="true"></div>
+    <div class="layout layout--xl hero__inner">
+        <div class="hero__content">
+            <!--<span class="section-heading__label section-heading__label--hero">Digital Engineering | BIM | CAD</span>-->
+            <h1 class="hero__title">Transforming complex builds into coordinated realities.</h1>
+            <p class="hero__subtitle">Visualution empowers contractors, developers, and consultants with high-fidelity BIM models, precision CAD documentation, and collaborative digital strategies that keep projects on time and on budget.</p>
+            <div class="hero__actions">
+                <a class="button button--primary" href="{% url 'main:contact' %}">Start a project</a>
+                <a class="button button--ghost" href="{% url 'main:service' %}">See our services</a>
+            </div>
+            <dl class="hero__metrics">
+                <div>
+                    <dt>Projects delivered</dt>
+                    <dd>120+</dd>
+                </div>
+                <div>
+                    <dt>Clash issues resolved</dt>
+                    <dd>15k</dd>
+                </div>
+                <div>
+                    <dt>On-time completion</dt>
+                    <dd>98%</dd>
+                </div>
+            </dl>
+        </div>
+        <div class="hero__visual">
+            <figure>
+                <img src="{% static 'img/astemir-almov--kgrPSetNW8-unsplash.jpg' %}" alt="Architectural building interior" loading="lazy">
+                <figcaption>Coordinated detailing for premium retail and mixed-use spaces.</figcaption>
+            </figure>
+        </div>
+    </div>
+
+</section>

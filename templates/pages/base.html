@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VISUALUTION</title>
-    <link rel="shortcut icon" href="{% static 'img/visualution.ico' %}" type="image/x-icon" sizes="32x32">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" />
+    <title>{% block title %}Visualution | Digital Engineering Reimagined{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{% static 'img/visualution.ico' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-M9vxOqi4q9BM8DT6vKrrO5gkP7FpC18m0tHbdDg14Q6gttYVOlJawVSxGInxjeRGna43EIBgzHuLlHotx5RXIw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
 </head>
-
 <body>
+    <header class="site-header" id="top">
+        <nav class="nav">
+            <div class="nav__inner">
+                <a class="nav__brand" href="{% url 'main:home' %}">
+                    <img class="nav__brand-emblem" src="{% static 'img/Visualution-LOGO3-trim-bgremove.png' %}" alt="Visualution emblem">
+                </a>
+                <button class="nav__toggle" type="button" aria-expanded="false" data-nav-toggle>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+                <ul class="nav__links" data-nav-menu>
+                    <li><a class="nav__link{% if request.resolver_match.url_name == 'home' %} nav__link--active{% endif %}" href="{% url 'main:home' %}">Home</a></li>
+                    <li><a class="nav__link{% if request.resolver_match.url_name == 'service' %} nav__link--active{% endif %}" href="{% url 'main:service' %}">Services</a></li>
+                    <li><a class="nav__link{% if request.resolver_match.url_name == 'project' %} nav__link--active{% endif %}" href="{% url 'main:project' %}">Projects</a></li>
+                    <li><a class="nav__link{% if request.resolver_match.url_name == 'about' %} nav__link--active{% endif %}" href="{% url 'main:about' %}">About</a></li>
+                    <li><a class="nav__link{% if request.resolver_match.url_name == 'contact' %} nav__link--active{% endif %}" href="{% url 'main:contact' %}">Contact</a></li>
+                    <li class="nav__links-cta"><a class="nav__link nav__link--cta" href="{% url 'main:contact' %}">Let's Talk</a></li>
+                </ul>
+                <a class="nav__cta" href="{% url 'main:contact' %}">Let's Talk</a>
+            </div>
+        </nav>
+    </header>
 
-    {% include 'pages/navbar.html' %}  
-    {% block main_content %}
-    {% endblock main_content %}
-    
+    {% block main_content %}{% endblock %}
+
+    {% include 'pages/footer.html' %}
+    <script src="{% static 'script/site.js' %}" defer></script>
 </body>
-<script src="{% static '/script/navbar.js' %}"></script>
-<script src="{% static '/script/grid.js' %}"></script>
 </html>
+
