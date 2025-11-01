@@ -643,6 +643,12 @@ ul {
     z-index: 1;
 }
 
+.fugaz-one-regular {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .about-hero {
     position: relative;
     display: flex;
@@ -663,13 +669,13 @@ ul {
 
 .about-hero__label {
     display: block;
-    font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Consolas', 'SFMono-Regular', monospace;
-    font-weight: 600;
-    letter-spacing: 0.18em;
+    font-family: 'Fugaz One', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+    font-size: clamp(1.3rem, 2.6vw, 1.7rem);
     margin: 0;
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.82);
 }
 
 .about-hero__title {
@@ -687,12 +693,12 @@ ul {
     align-items: center;
     min-width: 0;
     white-space: nowrap;
-    font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Consolas', 'SFMono-Regular', monospace;
-    font-size: clamp(3.2rem, 6.8vw, 5rem);
-    font-weight: 600;
+    font-family: 'Fugaz One', sans-serif;
+    font-size: clamp(3.4rem, 7vw, 5.3rem);
+    font-weight: 400;
     line-height: 1.08;
-    min-height: clamp(3.2rem, 6.8vw, 5rem);
-    padding-right: clamp(0.6rem, 1.3vw, 1rem);
+    min-height: clamp(3.4rem, 7vw, 5.3rem);
+    padding-right: clamp(0.7rem, 1.35vw, 1.1rem);
     position: relative;
 }
 
